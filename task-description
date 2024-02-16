@@ -1,0 +1,31 @@
+k Description
+
+You are tasked with completing a one-shot/stateless Python script that parses a services file (`services.txt`).
+The goal is to implement the `get_ports_and_protocols` function to extract information related to a given service name.
+
+# Requirements
+
+1. File Handling and Filtering:
+    - Your function should open and read the `services.txt` file.
+    - You should ignore lines without a service name.
+    - Lines starting with '#' are considered comments and should also be ignored.
+
+2. Script Execution:
+    - The script only needs to be run once for a given service name.
+    - The script should only output protocol-port pairs that exactly match the specified service name.
+    - The script does not need to track state or handle all file contents; only lines relevant to the searched service name.
+
+3. Testing:
+    - Ensure that your code can be executed with the provided test file (`test.py`). Adjust the test file if necessary.
+        - `python -m unittest`
+
+# Output
+
+- Your function should return a list of dictionaries, containing relevant ports and protocols for the specified service.
+- Each dictionary represents a single combination of protocol and port. Protocol as the key, port as the value.
+- EG: For service 'ntp' the output should be: 
+    - `[{'udp': '123'}, {'tcp': '123'}]`
+
+--- 
+
+To get started, some boilerplate code (`main.py`) should have been provided to you.
